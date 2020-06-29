@@ -1,0 +1,27 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/XOR_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/TB_ALU.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/OR_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/NOT_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/MUX8x1_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/MUX8x1.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/MUX2x1_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/MUX2x1.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/LogicShiftRight.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/LogicShiftLeft.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/FullSubstracter_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/FullSubstracter.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/FullAdder_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/FullAdder.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/ArithmeticShiftRight.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/AND_nBits.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/ALULogicModule.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/ALUArithmeticModule.sv}
+vlog -sv -work work +incdir+C:/Users/Inspiron\ 14-7460/Documents/Poyecto\ Grupal\ 1\ -\ Arqui/ALUs {C:/Users/Inspiron 14-7460/Documents/Poyecto Grupal 1 - Arqui/ALUs/ALU.sv}
+

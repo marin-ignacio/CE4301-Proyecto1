@@ -1,0 +1,17 @@
+module bankRegisterArray
+	#(parameter bits = 16)
+	 (input  logic 			  CLK, WE3, 
+	  input  logic            V1, V2, V3,
+	  input  logic [bits-1:0] WD3         [9:0],
+      output logic [bits-1:0] VD1         [9:0], 
+      output logic [bits-1:0] VD2         [9:0]);
+	
+	logic [bits-1:0] rf [9:0][1:0];
+	
+	always_ff@(posedge CLK)
+		if (WE3) rf[9:0][V3] <= WD3[9:0];
+		
+	assign VD1 = rf[9:0][V1];
+	assign VD2 = rf[9:0][V2];
+
+endmodule
