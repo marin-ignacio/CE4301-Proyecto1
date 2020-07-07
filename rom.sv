@@ -1,6 +1,6 @@
 
 module rom(			  input wire [18:0] addr1,addr2,addr3,addr4,addr5,addr6,addr7,addr8,addr9,addr10,
-                    output reg [1:0] data1,data2,data3,data4,data5,data6,data7,data8,data9,data10);
+                    output reg [15:0] data1,data2,data3,data4,data5,data6,data7,data8,data9,data10);
 
 parameter file = "image.txt";
 

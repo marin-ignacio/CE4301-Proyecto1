@@ -1,9 +1,9 @@
-C:/Users/Franklin/Documents/Arqui/rom.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/rom.sv
+C:/Users/Franklin/Documents/Arqui/dramImage.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/dramImage.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module rom
+-- Compiling module dramImage
 
 Top level modules:
-	rom
+	dramImage
 
 } {} {}} C:/Users/Franklin/Documents/Arqui/tb_rom.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/tb_rom.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -11,6 +11,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	tb_rom
+
+} {} {}} C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv {1 {vlog -work work -sv -stats=none {C:\Users\Franklin\Documents\Arqui\tb_dramImage.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_dramImage
+
+Top level modules:
+	tb_dramImage
 
 } {} {}} C:/Users/Franklin/Documents/Arqui/imem.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/imem.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
