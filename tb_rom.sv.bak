@@ -1,0 +1,25 @@
+module tb_rom();
+
+reg [18:0] a;
+wire [7:0] o;
+
+rom romp( .address(a), .data(o));
+always begin 
+c <= 0;
+#10;
+c<= 1;
+#10;
+end
+
+initial begin
+@(posedge c);
+#5 a <= 19'h0;
+@(posedge c);
+#5 a <= 19'h1;
+@(posedge c);
+#5 a <= 19'h2;
+@(posedge c);
+#5 a <= 19'h3;
+
+end
+endmodule

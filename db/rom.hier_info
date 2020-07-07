@@ -1,0 +1,6 @@
+|rom
+address => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+data <= <GND>
+
+
