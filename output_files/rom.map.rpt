@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rom
-Wed Jul 01 19:52:27 2020
+Thu Jul 09 08:17:05 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |rom
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -33,22 +40,27 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Jul 01 19:52:27 2020           ;
-; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name               ; rom                                         ;
-; Top-level Entity Name       ; rom                                         ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Jul 09 08:17:05 2020       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; rom                                         ;
+; Top-level Entity Name           ; rom                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 179                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -154,13 +166,108 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+; rom.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Franklin/Documents/Arqui/rom.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 0        ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 0        ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 0        ;
+;     -- 5 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- <=3 input functions                  ; 0        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 179      ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; addr1[0] ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 179      ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |rom                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 179  ; 0            ; |rom                ; rom         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |rom ;
++----------------+-----------+----------------------------------------+
+; Parameter Name ; Value     ; Type                                   ;
++----------------+-----------+----------------------------------------+
+; file           ; image.txt ; String                                 ;
++----------------+-----------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 179                         ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Jul 01 19:52:02 2020
+    Info: Processing started: Thu Jul 09 08:13:02 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rom -c rom
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -170,15 +277,208 @@ Info (12021): Found 1 design units, including 1 entities, in source file tb_rom.
     Info (12023): Found entity 1: tb_rom File: C:/Users/Franklin/Documents/Arqui/tb_rom.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file dram.sv
     Info (12023): Found entity 1: dmem File: C:/Users/Franklin/Documents/Arqui/dram.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
+    Info (12023): Found entity 1: imem File: C:/Users/Franklin/Documents/Arqui/imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_imem.sv
+    Info (12023): Found entity 1: tb_imem File: C:/Users/Franklin/Documents/Arqui/tb_imem.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file dramimage.sv
+    Info (12023): Found entity 1: dramImage File: C:/Users/Franklin/Documents/Arqui/dramImage.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_dramimage.sv
+    Info (12023): Found entity 1: tb_dramImage File: C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv Line: 1
 Info (12127): Elaborating entity "rom" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at rom.sv(12): truncated value with size 19 to match size of target (8) File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 12
-Error (10852): Verilog HDL error at image.txt(1): illegal character 'x' in hexadecimal number File: C:/Users/Franklin/Documents/Arqui/image.txt Line: 1
-Error (10170): Verilog HDL syntax error at image.txt(1) near text: x. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/Franklin/Documents/Arqui/image.txt Line: 1
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
-    Error: Peak virtual memory: 5682 megabytes
-    Error: Processing ended: Wed Jul 01 19:52:27 2020
-    Error: Elapsed time: 00:00:25
-    Error: Total CPU time (on all processors): 00:00:53
+Warning (10850): Verilog HDL warning at rom.sv(34): number of words (307200) in memory file does not match the number of elements in the address range [0:307200] File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 34
+Warning (10855): Verilog HDL warning at rom.sv(33): initial value for variable rom should be constant File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 33
+Warning (10030): Net "rom" at rom.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "data1[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data1[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data2[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data3[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data4[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data5[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data6[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data7[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data8[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data9[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[0]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[1]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[2]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[3]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[4]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[5]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[6]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[7]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[8]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[9]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[10]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[11]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[12]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[13]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[14]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+    Warning (13410): Pin "data10[15]" is stuck at GND File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 3
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "addr1[0]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[1]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[2]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[3]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[4]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[5]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[6]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[7]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[8]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[9]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[10]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[11]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[12]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[13]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[14]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[15]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[16]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[17]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+    Warning (15610): No output dependent on input pin "addr1[18]" File: C:/Users/Franklin/Documents/Arqui/rom.sv Line: 2
+Info (21057): Implemented 179 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 160 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 185 warnings
+    Info: Peak virtual memory: 9475 megabytes
+    Info: Processing ended: Thu Jul 09 08:17:05 2020
+    Info: Elapsed time: 00:04:03
+    Info: Total CPU time (on all processors): 00:04:12
 
 
