@@ -7,12 +7,12 @@ imem imemp( .a(a), .rd(rd));
 
 
 initial begin
-#5 a <= 32'd0;
-#5 a <= 32'd5;
-#5 a <= 32'd9;
-#5 a <= 32'd13;
-#5 a <= 32'd17;
-#5 a <= 32'd21;
+   a <= 32'h0;
+#5 a <= 32'h5;
+#5 a <= 32'h9;
+#5 a <= 32'hD;
+#5 a <= 32'h11;
+#5 a <= 32'h15;
 
 end
 endmodule

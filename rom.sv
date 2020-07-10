@@ -5,20 +5,9 @@ module rom(			  input logic [18:0] addr1,
 parameter file = "image.txt";
 
 
-reg [7:0] rom [307200:0];
+reg [7:0] rom [307199:0] ='{default:8'd0};
 
-//always @(posedge clk) begin
-   //data1 <= rom[addr1];
-	//data2 <= rom[addr2];
-	//data3 <= rom[addr3];
-	//data4 <= rom[addr4];
-	//data5 <= rom[addr5];
-	//data6 <= rom[addr6];
-	//data7 <= rom[addr7];
-	//data8 <= rom[addr8];
-	//data9 <= rom[addr9];
-	//data10 <= rom[addr10];
-//end
+
 
 assign data1= {rom[addr1], rom[addr1+1]};
 assign data2= {rom[addr1+2], rom[addr1+3]};

@@ -1,37 +1,16 @@
-C:/Users/Franklin/Documents/Arqui/rom.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/rom.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module rom
-
-Top level modules:
-	rom
-
-} {} {}} C:/Users/Franklin/Documents/Arqui/dramImage.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/dramImage.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module dramImage
-
-Top level modules:
-	dramImage
-
-} {} {}} C:/Users/Franklin/Documents/Arqui/tb_rom.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/tb_rom.sv
+C:/Users/Franklin/Documents/Arqui/tb_rom.sv {1 {vlog -work work -sv -stats=none {C:\Users\Franklin\Documents\Arqui\tb_rom.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_rom
 
 Top level modules:
 	tb_rom
 
-} {} {}} C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv
+} {} {}} C:/Users/Franklin/Documents/Arqui/ROM.v {1 {vlog -work work -stats=none C:/Users/Franklin/Documents/Arqui/ROM.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_dramImage
+-- Compiling module ROM
 
 Top level modules:
-	tb_dramImage
-
-} {} {}} C:/Users/Franklin/Documents/Arqui/imem.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/imem.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module imem
-
-Top level modules:
-	imem
+	ROM
 
 } {} {}} C:/Users/Franklin/Documents/Arqui/dram.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/dram.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -40,11 +19,25 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	dmem
 
+} {} {}} C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/tb_dramImage.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_dramImage
+
+Top level modules:
+	tb_dramImage
+
 } {} {}} C:/Users/Franklin/Documents/Arqui/tb_imem.sv {1 {vlog -work work -sv -stats=none C:/Users/Franklin/Documents/Arqui/tb_imem.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_imem
 
 Top level modules:
 	tb_imem
+
+} {} {}} C:/Users/Franklin/Documents/Arqui/tb_ROMSimulation.v {1 {vlog -work work -stats=none C:/Users/Franklin/Documents/Arqui/tb_ROMSimulation.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_ROMSimulation
+
+Top level modules:
+	tb_ROMSimulation
 
 } {} {}}
