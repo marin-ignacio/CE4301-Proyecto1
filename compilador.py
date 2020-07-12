@@ -1,36 +1,43 @@
-arit= {'add' : ["000"], 'mul' : ["001"],'and' : ["010"], 'sub' :["011"],
-       'cmp' : ["100"], 'lsr' :["101"], 'mov' :["110"]}
+arit= {'add' : ["0000"], 'mulv' : ["0001"],'and' : ["0010"], 'sub' :["0001"],
+       'cmp' : ["0100"], 'lsr' :["0011"], 'mov' :["1000"], 'addv' :["0110"], 'mulv' :["0111"]}
 mem = {'ldr' : ["101"], 'str' :["101"]}
 
 banderas = dict(eq="0000",ne="0001", cs="0010", cc="0011",
-                mi="0100" , pl= "0101", vs ="0110", vc = "0111",
-                hi = "1000", ls= "1001", ge="1010", lt= "1011",
-                gt= "0011", le="0011", al="1110")
+                mi="0100" , pl= "0101", ov ="0110", oc = "0111",
+                hi = "1000", ms= "1001", ge="1010", mt= "1011",
+                gt= "0011", me="0011", al="1110")
 
 codigo=""
 f = open("codigo.txt", "r")
 f2 = open("hexa.data", "w")
 lineas = f.readlines()
+print(lineas)
 l=0
 m=0
-
+v=0
+i=0
+s=0
+l=0
 
 
 for i in lineas:
     cad = i.strip().lower()
+    print(cad)
     if cad.find(":") != -1:
         print("etiqueta")
     elif cad[0:1] == "b":
         print("control")
-        for k in banderas:
-            if cad[1:3] == k:
-                codigo += banderas[k][0]
-            elif cad[1] == "l":
-                l=1
-        if codigo == "":
-            codigo += "0000"
-        codigo += "10" + "l" +"0"
-        codigo += cad[2:]
+        print("Cadena es"+cad[2:3])
+        if cad[1:2] == "l":
+            for k in banderas:
+                if cad[2:4] == k:
+                    codigo += banderas[k][0]
+                elif cad[2:3] == "":
+                    codigo += banderas['al'][0]
+            if codigo == "":
+                codigo += "0000"
+            codigo += "10" + "l" +"0"
+            codigo += cad[2:]
         
             
         
