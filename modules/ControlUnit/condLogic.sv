@@ -9,8 +9,7 @@ module condLogic
 	logic       CondEx;
 
 	FlipFlop #(2) flagreg1(ALUFlags[3:2], CLK, reset, FlagWrite[1], Flags[3:2]);
-	FlipFlop #(2) flagreg0(ALU
-	Flags[1:0], CLK, reset, FlagWrite[0], Flags[1:0]);
+	FlipFlop #(2) flagreg0(ALUFlags[1:0], CLK, reset, FlagWrite[0], Flags[1:0]);
 	
 	//Write controls are conditional
 	assign FlagWrite = FlagW & {2{CondEx}};
