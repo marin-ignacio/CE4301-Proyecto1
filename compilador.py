@@ -48,10 +48,6 @@ def loadLabel():                        #fist read all the document to find and 
         for x in listaPalabras:
             if(x[0]==":"):
                 labels[str(x[1:])] = str(createBinaryLabel(line))
-                print("encuentra etiqueta:   " + x[1:])
-                print ("diccionario de etiquetas:  ")
-                print(labels)
-            print("valor de i: " + x)
         if(len(listaPalabras) != 0):
             if not((len(listaPalabras) == 1) and (listaPalabras[0][0]==":")):
                 line += 1
@@ -85,21 +81,22 @@ for i in lineas:
                 for busquedaDic in labels:
                     if(str(datos[1]) == str(busquedaDic)):
                         codigo += labels[datos[1]]
-            if(len(codigo)==28):
+            codigo += "0000"
+            if(len(codigo)==32):
                 print("branch Completed")
                 f2.write(hex(int(codigo[0:4],2))[2:]+ hex(int(codigo[4:8],2))[2:]+ hex(int(codigo[8:12],2))[2:]+
                                  hex(int(codigo[12:16],2))[2:]+hex(int(codigo[16:20],2))[2:]+hex(int(codigo[20:24],2))[2:]+
-                                 hex(int(codigo[24:28],2))+'\n')
+                                 hex(int(codigo[24:28],2))[2:]+hex(int(codigo[28:32],2))+'\n')
             print("código hasta aquí: " +codigo)
         
             
         
     elif cad[0:3] == "str" or cad[0:3] ==  "ldr" or cad[0:3] ==  "ldi":       #section form memory operations
         print("memoria")
-        codigo += "01"                                  #Set "OP" [27:26] in position
+        codigo += "01"                                  # Set "OP" [27:26] in position
         for k in banderas:
            if cad[3:5] == k:
-               codigo += banderas[k]                    # this part set the correct flag in binary "COND" [21:18]
+               codigo += banderas[k]                    # This part set the correct flag in binary "COND" [21:18]
         if codigo =="01":
            codigo += "0000"
 
@@ -107,7 +104,7 @@ for i in lineas:
         ############### M ROM RAM ############################
         if(cad[0:3] == "ldi"):          #M
             print("leemos desde la ROM")
-            codigo += "1"           #sujeto a cambios
+            codigo += "1"                               # Sujeto a cambios
         else:
             codigo += "0"
         if(cad[4]=="v"):                #V
@@ -115,7 +112,7 @@ for i in lineas:
         else:
             codigo += "0"
 
-        if(cad[0:3] == "ldr" or cad[0:3] == "ldi"):          #L
+        if(cad[0:3] == "ldr" or cad[0:3] == "ldi"):     #L
             codigo += "1"
         else:
             codigo += "0"
@@ -136,14 +133,14 @@ for i in lineas:
                     elif datos[pos][0:2] == k:
                         codigo += registers[datos[pos][0:2]]
                 pos += 1
-        codigo += "000000"
-        if(len(codigo) == 28):
+        codigo += "0000000000"
+        if(len(codigo) == 32):
             print("Acceso a memoria completo, instrucción: ", codigo)
             escritura =  hex(int(codigo[0:4],2))[2:]+ hex(int(codigo[4:8],2))[2:]+ hex(int(codigo[8:12],2))[2:]+hex(int(codigo[12:16],2))[2:]+hex(int(codigo[16:20],2))[2:]+hex(int(codigo[20:24],2))[2:]+hex(int(codigo[24:28],2))+'\n'
             print(escritura)
             f2.write(hex(int(codigo[0:4],2))[2:]+ hex(int(codigo[4:8],2))[2:]+ hex(int(codigo[8:12],2))[2:]+
                                  hex(int(codigo[12:16],2))[2:]+hex(int(codigo[16:20],2))[2:]+hex(int(codigo[20:24],2))[2:]+
-                                 hex(int(codigo[24:28],2))+'\n')
+                                 hex(int(codigo[24:28],2))[2:]+hex(int(codigo[28:32],2))+'\n')
         
         
         
@@ -192,7 +189,7 @@ for i in lineas:
                                         elif datos[pos][0:2] == k:
                                             codigo += registers[datos[pos][0:2]]
                                     pos += 1
-                                codigo += "000000"
+                                codigo += "0000000000"
                             else:
                                 for k in registers:
                                     if len(datos[1]) > 3:
@@ -203,20 +200,20 @@ for i in lineas:
                                     elif datos[1][0:2] == k:
                                         codigo += registers[datos[1][0:2]]
                                 inmediate = decToBin(int(datos[2][1:]))
-                                if len(inmediate) <10:
+                                if len(inmediate) <14:
                                     inmediate = "0" + inmediate
                                 codigo += inmediate
                         print("Acceso a datos,tamaño de la instrucción: ", len(codigo))
-                        if(len(codigo) == 28):
+                        if(len(codigo) == 32):
                             print("Acceso a datos completo, instrucción: ", codigo)
                             escritura =  hex(int(codigo[0:4],2))[2:]+ hex(int(codigo[4:8],2))[2:]+ hex(int(codigo[8:12],2))[2:]+hex(int(codigo[12:16],2))[2:]+hex(int(codigo[16:20],2))[2:]+hex(int(codigo[20:24],2))[2:]+hex(int(codigo[24:28],2))+'\n'
                             print(escritura)
                             f2.write(hex(int(codigo[0:4],2))[2:]+ hex(int(codigo[4:8],2))[2:]+ hex(int(codigo[8:12],2))[2:]+
                                                  hex(int(codigo[12:16],2))[2:]+hex(int(codigo[16:20],2))[2:]+hex(int(codigo[20:24],2))[2:]+
-                                                 hex(int(codigo[24:28],2))+'\n')
+                                                 hex(int(codigo[24:28],2))[2:]+hex(int(codigo[28:32],2))+'\n')
                        
 
-                        print("el código es: " , codigo , "y su tamaño:  " , len(codigo))
+                       
                     
     codigo = "";
     linea +=1
